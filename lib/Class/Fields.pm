@@ -1,3 +1,5 @@
+# $Id: Fields.pm,v 1.10 2000/07/19 06:45:57 schwern Exp $ 
+
 package Class::Fields;
 
 use strict;
@@ -12,9 +14,14 @@ require Exporter;
               field_attribs
               dump_all_attribs
               show_fields
+              is_public
+              is_private
+              is_protected
+              is_inherited
+              is_field
             );
 
-$VERSION = '0.08';
+$VERSION = '0.10';
 
 use Class::Fields::Fuxor;
 use Class::Fields::Attribs;
@@ -41,6 +48,7 @@ Class::Fields - Inspect the fields of a class.
 
     use Class::Fields;
 
+    is_field    ($class, $field);
     is_public   ($class, $field);
     is_private  ($class, $field);
     is_protected($class, $field);
@@ -85,6 +93,24 @@ be used that way by having your module inherit from it.  For example:
         $obj->is_public('this');
 
 =over 4
+
+=item B<is_field>
+
+  is_field($class, $field);
+  $class->is_field($field);
+
+Simply asks if a given $class has the given $field defined in it.
+
+=cut
+
+sub is_field {
+    my($proto, $field) = @_;
+
+    my($class) = ref $proto || $proto;
+    return defined field_attrib_mask($class, $field) ? 1 : 0;
+}
+
+=pod
 
 =item B<is_public>
 
@@ -205,7 +231,7 @@ sub show_fields {
 
     # Return all fields with the requested bitmask.
     my $fattr   = get_attr($class);
-    return grep { ($fattr->[$fields->{$_}-1] & $want_attr) == $want_attr} 
+    return grep { ($fattr->[$fields->{$_}] & $want_attr) == $want_attr} 
                 keys %$fields;
 }
 
@@ -233,7 +259,7 @@ sub field_attrib_mask {
     my $fields  = get_fields($class);
     my $fattr   = get_attr($class);
     return unless defined $fields->{$field};
-    return $fattr->[$fields->{$field} - 1];
+    return $fattr->[$fields->{$field}];
 }
 
 =pod
