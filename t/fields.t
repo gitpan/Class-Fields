@@ -38,8 +38,8 @@ sub eqarray  {
     my $ok = 1;
     for (0..$#{$a1}) { 
         unless($a1->[$_] eq $a2->[$_]) {
-        $ok = 0;
-        last;
+            $ok = 0;
+            last;
         }
     }
     return $ok;
@@ -72,7 +72,7 @@ ok( eqarray( [sort &show_fields('Foo', 'Private')],
 
 # We should get compile time failures field name typos
 eval q(my Foo $obj = Foo->new; $obj->{notthere} = "");
-ok( $@ && $@ =~ /^No such field "notthere"/ );
+ok( $@ && $@ =~ /^No such(?: [\w-]+)? field "notthere"/i );
 
 
 foreach (Foo->new) {

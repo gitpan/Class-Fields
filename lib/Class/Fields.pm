@@ -4,6 +4,7 @@ use strict;
 no strict 'refs';
 
 use vars qw(@ISA @EXPORT $VERSION);
+require Exporter;
 @ISA = qw(Exporter);
 
 # is_* will push themselves onto @EXPORT
@@ -13,7 +14,7 @@ use vars qw(@ISA @EXPORT $VERSION);
               show_fields
             );
 
-$VERSION = 0.06;
+$VERSION = '0.08';
 
 use Class::Fields::Fuxor;
 use Class::Fields::Attribs;
@@ -184,7 +185,9 @@ sub show_fields {
     # Allow its tri-nature.
     my($class) = ref $proto || $proto;
 
-    my $fields  = \%{$class.'::FIELDS'};
+    return unless has_fields($class);
+
+    my $fields  = get_fields($class);
 
     # Shortcut:  Return all fields if they don't specify a set of
     # attributes.
