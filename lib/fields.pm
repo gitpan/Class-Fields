@@ -151,10 +151,15 @@ L<base>,
 require 5.005;
 use strict;
 no strict 'refs';
-eval q{use warnings::register;} if $] >= 5.006;
+unless( eval q{require warnings::register; warnings::register->import} ) {
+    *warnings::warnif = sub { 
+        require Carp;
+        Carp::carp(@_);
+    }
+}
 use vars qw(%attr $VERSION);
 
-$VERSION = "1.0201";
+$VERSION = "1.0202";
 
 # some constants
 sub _PUBLIC    () { 1 }
