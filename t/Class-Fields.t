@@ -1,4 +1,4 @@
-# $Id: Class-Fields.t,v 1.6 2000/07/19 07:08:32 schwern Exp $ 
+# $Id: Class-Fields.t,v 1.7 2003/02/26 21:44:05 schwern Exp $ 
 # Before `make install' is performed this script should be runnable with
 # `make test'. After `make install' it should work as `perl test.pl'
 
@@ -99,7 +99,7 @@ use Class::Fields;
 ::ok( is_protected('Foo', '_stuff'),    'Function:  is_protected()'         );
 
 use Class::Fields::Attribs;
-::ok( (field_attrib_mask('Bar', 'Pants') == PROTECTED|INHERITED),
+::ok( (field_attrib_mask('Bar', 'Pants') == (PROTECTED|INHERITED)),
                                         'field_attrib_mask()'               );
 ::ok( ::eqarray([sort &field_attribs('Bar', 'Pants')],
                 [sort qw(Protected Inherited)]),
