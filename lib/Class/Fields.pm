@@ -1,4 +1,4 @@
-# $Id: Fields.pm,v 1.19 2003/08/28 05:00:52 schwern Exp $ 
+# $Id: Fields.pm,v 1.20 2003/08/28 20:41:50 schwern Exp $ 
 
 package Class::Fields;
 
@@ -21,7 +21,7 @@ require Exporter;
               is_field
             );
 
-$VERSION = '0.20';
+$VERSION = '0.201';
 
 use Class::Fields::Fuxor;
 use Class::Fields::Attribs;

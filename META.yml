@@ -1,9 +1,9 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         Class-Fields
-version:      0.20
+version:      0.201
 version_from: lib/Class/Fields.pm
-installdirs:  perl
+installdirs:  site
 requires:
     base:                          2
     Carp:                          0
