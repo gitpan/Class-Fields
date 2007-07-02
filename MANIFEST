@@ -17,3 +17,4 @@ t/examples.t
 t/Fuxor.t
 t/Inherit.t
 t/members.t
+SIGNATURE                                Public-key signature (added by MakeMaker)

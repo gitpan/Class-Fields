@@ -1,14 +1,16 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Class-Fields
-version:      0.201
-version_from: lib/Class/Fields.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Class-Fields
+version:             0.202
+abstract:            ~
+license:             ~
+generated_by:        ExtUtils::MakeMaker version 6.34
+distribution_type:   module
+requires:     
     base:                          2
     Carp:                          0
     Carp::Assert:                  0
     constant:                      0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.16
+    Test::More:                    0.47
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
