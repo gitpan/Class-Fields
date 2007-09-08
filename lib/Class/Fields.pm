@@ -1,4 +1,4 @@
-# $Id: /local/Class-Fields/lib/Class/Fields.pm 32229 2007-07-02T05:44:15.342605Z schwern  $ 
+# $Id: /local/Class-Fields/lib/Class/Fields.pm 35778 2007-09-07T23:59:49.512061Z schwern  $ 
 
 package Class::Fields;
 
@@ -21,7 +21,7 @@ require Exporter;
               is_field
             );
 
-$VERSION = '0.202';
+$VERSION = '0.203';
 
 use Class::Fields::Fuxor;
 use Class::Fields::Attribs;

@@ -1,3 +1,8 @@
+0.203  Fri Sep  7 16:59:15 PDT 2007
+    Test Fixes
+    - Moved some tests that were really testing base.pm to base.
+    - Made a test less dependent on the formatting of a base.pm warning.
+
 0.202  Sun Jul  1 22:43:41 PDT 2007
     Test Fixes
     - A warning changed in base or fields.pm which broke t/bugs.t.

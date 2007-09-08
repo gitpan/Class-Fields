@@ -14,11 +14,11 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 b5eb4f14f0537111fa28095541edf6952000f1ec Changes
-SHA1 5edbb228899dc9505e7e60c8a038727024d4d437 MANIFEST
-SHA1 98a314f75115421aac65872fddadcf29cbb1e80d META.yml
+SHA1 e18c1b97c4740115139d359a4afefa0bea320291 Changes
+SHA1 88dacb7b53e8fb6249fb824c901b42c9422c5131 MANIFEST
+SHA1 8f71236c9a81efad0b9f8945d9c2832b12b97a8c META.yml
 SHA1 10a3155dfa14484bf26d5915d82f2bac3796902c Makefile.PL
-SHA1 876bb4dc861603458269657c50287bed99ffb01a lib/Class/Fields.pm
+SHA1 2e529b017e972ef1917f7b571c41577c06584071 lib/Class/Fields.pm
 SHA1 99ea82aec43c6f587ea822daeda14576dbbac9e1 lib/Class/Fields/Attribs.pm
 SHA1 51cc7b21d8a95e708384e82b42f37869963493c1 lib/Class/Fields/Fuxor.pm
 SHA1 01b2f72fed16139a4c0d1a481b3cd3eae286d828 lib/Class/Fields/Inherit.pm
@@ -27,16 +27,15 @@ SHA1 9b0e7601cdf543edbfc48e58c0464fbb0cca130b lib/protected.pm
 SHA1 ebb8fca5a23c966635fc9ac872ebbfd5968fafab lib/public.pm
 SHA1 82b8d66b4a3634ee7f75c08f8de94b2034b25f53 t/Attribs.t
 SHA1 fdba6bf6b99739c5fb79ac056250ad685bea108f t/Class-Fields.t
-SHA1 c3a756276e12a617e96f72308a1afb2ace66b3cf t/Dummy.pm
 SHA1 095b18d78bb86aea53d73dd297b2c4803521cddc t/Fuxor.t
 SHA1 860e5773f34decf746eb75f37838edb66e537e56 t/Inherit.t
-SHA1 f2c5c4c6d1a50b53dd1005553ce6c0beb2bcb786 t/bugs.t
+SHA1 5b3ce9d86d50628a3d6858ac26cd60db667fcbeb t/bugs.t
 SHA1 6f7c4c5c51e9748adbe0fcf22b3e21015fbc7163 t/examples.t
 SHA1 5fa5bbff1b8e252b198e093210b4463981e56842 t/members.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFGiJC9WMohlhD1QycRArvBAKDAUAwOzswEUpmXjuk8dU4Jw5ZXSACfVCce
-AQfAEcuKoQ4wwcfQWQh4Tz0=
-=kFUD
+iD8DBQFG4eYHWMohlhD1QycRAg4VAJsGehmXJduS1YbRig8CdWYyywre+ACfXh6y
+dgqxDObcz8EVKZfbZ8B+884=
+=hk1d
 -----END PGP SIGNATURE-----

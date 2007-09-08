@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:                Class-Fields
-version:             0.202
+version:             0.203
 abstract:            ~
 license:             ~
-generated_by:        ExtUtils::MakeMaker version 6.34
+generated_by:        ExtUtils::MakeMaker version 6.36
 distribution_type:   module
 requires:     
     base:                          2
